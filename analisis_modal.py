@@ -41,7 +41,9 @@ def calcular_fuerzas_modales(M_matrix, U_vector):
     return M_matrix @ U_vector
 
 def calcular_cortantes_por_modo(fuerzas):
-    return np.array([np.sum(fuerzas[i:]) for i in range(len(fuerzas))])
+    fuerzas_invertidas = fuerzas[::-1]
+    f = np.array([np.sum(fuerzas_invertidas [i:]) for i in range(len(fuerzas_invertidas ))])
+    return f[::-1]
 
 def superposicion_modal(fuerzas_modales):
     abs_sum = np.sum(np.abs(fuerzas_modales), axis=1)
