@@ -11,8 +11,6 @@ st.title("Análisis Sísmico en Edificaciones")
 with st.sidebar:
     st.image("images/logo.png", width=100)
 
-st.sidebar.subheader("Parámetros de Entrada")
-
 # Parámetros Generales
 with st.sidebar.expander("Parámetros Generales", expanded=True):
     cols = st.columns(2)
